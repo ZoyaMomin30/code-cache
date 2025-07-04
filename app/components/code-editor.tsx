@@ -106,7 +106,6 @@ export function CodeEditor({ folders, onCodeSaved }: CodeEditorProps) {
 
   return (
 
-
     <div className="max-w-3xl mx-auto">
       <div className=" rounded-lg shadow-sm">
 

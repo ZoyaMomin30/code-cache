@@ -9,6 +9,7 @@ import { SnippetsGrid } from "@/app/components/snippets-grid"
 import { useToast } from "@/hooks/use-toast"
 import type { CodeSnippet } from "@/lib/db"
 import { useRouter } from "next/navigation"
+import { FolderView } from "./components/folder-view"
 
 export default function HomePage() {
   redirect("/login")

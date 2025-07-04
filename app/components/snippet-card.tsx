@@ -1,7 +1,7 @@
 "use client"
 
 import { useState } from "react"
-import { Copy, Share2, Trash2 } from "lucide-react"
+import { Copy, Share2, Trash2 , ImageIcon } from "lucide-react"
 import { useToast } from "@/hooks/use-toast"
 import type { CodeSnippet } from "@/lib/db"
 
@@ -91,6 +91,21 @@ export function SnippetCard({ snippet, onDelete }: SnippetCardProps) {
       <div>
         <a href="snippet.screenshot_url" className="card-tag text-lg ">{snippet.title }</a>
       </div>
+              {/* Screenshot Link */}
+        {snippet.screenshot_url && (
+          <div className="mb-3">
+            <button
+              onClick={(e) => {
+                e.stopPropagation()
+                window.open(snippet.screenshot_url!, "_blank")
+              }}
+              className="flex items-center gap-2 text-blue-600 hover:text-blue-800 text-sm"
+            >
+              <ImageIcon className="h-4 w-4" />
+              View Screenshot
+            </button>
+          </div>
+        )}
 
       <style jsx>{`
         .card {

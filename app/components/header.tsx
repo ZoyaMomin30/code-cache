@@ -9,7 +9,7 @@ export function Header() {
         <div className="flex items-center gap-3">
           <Code2 className="h-8 w-8 text-blue-600" />
           <div>
-            <h1 className="text-3xl font-bold text-gray-900">CodeCache</h1>
+            <h1 className="text-3xl font-bold font-mono text-gray-900">CodeCache</h1>
           </div>
 
                     {/* <button className="relative cursor-pointer font-serif py-2 px-5 text-center font-barlow inline-flex justify-center text-base uppercase text-white rounded-lg border-solid transition-transform duration-300 ease-in-out group outline-offset-4 focus:outline focus:outline-2 focus:outline-white focus:outline-offset-4 overflow-hidden">

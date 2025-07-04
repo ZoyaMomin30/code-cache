@@ -78,10 +78,19 @@ export function CreateFolderDialog({ onFolderCreated }: CreateFolderDialogProps)
   return (
     <Dialog open={open} onOpenChange={setOpen}>
       <DialogTrigger asChild>
-        <Button variant="outline" className="border-gray-300 text-gray-700 hover:text-gray-900 bg-white">
+        {/* <Button variant="outline" className="border-gray-300 text-gray-700 hover:text-gray-900 bg-white">
           <FolderPlus className="h-4 w-4 mr-2" />
           New Folder
-        </Button>
+        </Button> */}
+          <Button variant="outline"
+              className="relative cursor-pointer font-serif py-2 px-5 text-center font-barlow inline-flex justify-center text-base uppercase text-white rounded-lg border-solid transition-transform duration-300 ease-in-out group outline-offset-4 focus:outline focus:outline-2 focus:outline-white focus:outline-offset-4 overflow-hidden">
+            <span className="relative z-20 text-primary">Create Folder</span>
+            <span className="absolute left-[-75%] top-0 h-full w-[50%] bg-white/20 rotate-12 z-10 blur-lg group-hover:left-[125%] transition-all duration-1000 ease-in-out"></span>
+            <span className="w-1/2 drop-shadow-3xl transition-all duration-300 block border-primary absolute h-[20%] rounded-tl-lg border-l-2 border-t-2 top-0 left-0"></span>
+            <span className="w-1/2 drop-shadow-3xl transition-all duration-300 block border-primary absolute group-hover:h-[90%] h-[60%] rounded-tr-lg border-r-2 border-t-2 top-0 right-0"></span>
+            <span className="w-1/2 drop-shadow-3xl transition-all duration-300 block border-primary absolute h-[60%] group-hover:h-[90%] rounded-bl-lg border-l-2 border-b-2 left-0 bottom-0"></span>
+            <span className="w-1/2 drop-shadow-3xl transition-all duration-300 block border-primary absolute h-[20%] rounded-br-lg border-r-2 border-b-2 right-0 bottom-0"></span>
+          </Button>
       </DialogTrigger>
       <DialogContent className="bg-white border-gray-200">
         <DialogHeader>
@@ -120,7 +129,7 @@ export function CreateFolderDialog({ onFolderCreated }: CreateFolderDialogProps)
             <Button type="button" variant="outline" onClick={() => setOpen(false)}>
               Cancel
             </Button>
-            <Button type="submit" disabled={isSubmitting} className="bg-blue-600 hover:bg-blue-700 text-white">
+            <Button type="submit" disabled={isSubmitting} className="border boder-[10px] border-violet-600 bg-white hover:bg-violet-700 hover:text-white text-black">
               {isSubmitting ? "Creating..." : "Create Folder"}
             </Button>
           </div>

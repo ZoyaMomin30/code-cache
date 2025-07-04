@@ -22,7 +22,7 @@ export interface CodeSnippet {
   user_id: number
   created_at: string
   updated_at: string
-  folder_name?: string
+  folder_name?: string | null
 }
 
 export async function getFoldersByUserId(userId: number): Promise<Folder[]> {
