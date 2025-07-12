@@ -4,7 +4,7 @@ import type React from "react"
 
 import { useState } from "react"
 import { useRouter } from "next/navigation"
-import { Eye, EyeOff, LogIn } from "lucide-react"
+import { Eye, EyeOff, LogIn, Download, Share2, NotebookPen, Code, Brackets, CodeXml} from "lucide-react"
 import { Button } from "@/app/components/ui/button"
 import { Input } from "@/app/components/ui/input"
 import { Label } from "@/app/components/ui/label"
@@ -62,9 +62,20 @@ export function LoginForm() {
   }
 
   return (
-    <Card className="w-full max-w-md mx-auto">
+
+    <div className="grid grid:col-2 ">
+      
+      <h1 className="font-bold font-serif text-5xl text-center text-white py-5"> CodeCache</h1>
+      <div className="flex justify-around ">
+      <Share2 className="h-[50px] w-[50px] y-10 text-violet-400"/>
+      <Download className="h-[50px] w-[50px] text-pink-400"  />
+      <Brackets className="h-[50px] w-[50px] text-green-400"/>
+      </div>
+      <p className="text-white font-san py-6">Say goodbye to messy code notes! Save, share, and organize your snippets easily. Tool made by developers, for developers. </p>
+    <Card className="w-full max-w-md mx-auto ">
       <CardHeader className="text-center">
         <CardTitle className="text-2xl font-bold">Welcome Back</CardTitle>
+        
         <CardDescription>Sign in to your account to continue</CardDescription>
       </CardHeader>
       <CardContent>
@@ -120,5 +131,7 @@ export function LoginForm() {
         </form>
       </CardContent>
     </Card>
+    </div>
+
   )
 }

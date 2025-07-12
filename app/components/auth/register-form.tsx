@@ -87,6 +87,7 @@ export function RegisterForm() {
   }
 
   return (
+    <div className="">
     <Card className="w-full max-w-md mx-auto">
       <CardHeader className="text-center">
         <CardTitle className="text-2xl font-bold">Create Account</CardTitle>
@@ -169,5 +170,7 @@ export function RegisterForm() {
         </form>
       </CardContent>
     </Card>
+    </div>
+
   )
 }

@@ -106,8 +106,8 @@ export function CodeEditor({ folders, onCodeSaved }: CodeEditorProps) {
 
   return (
 
-    <div className="max-w-3xl mx-auto">
-      <div className=" rounded-lg shadow-sm">
+    <div className="max-w-3xl mx-auto ">
+      <div className=" rounded-lg shadow-sm border border-[2px] border-purple-600 ">
 
         {/* Code Editor with macOS style */}
         <div className="bg-black border border-gray-800 rounded-lg m-6 hover:shadow-md transition">
@@ -125,24 +125,13 @@ export function CodeEditor({ folders, onCodeSaved }: CodeEditorProps) {
 
             
             <div className="flex space-x-2">
-              <Button
-                variant="ghost"
-                size="sm"
-                onClick={handleCopy}
-                className="text-gray-400 hover:text-white h-8 w-8 p-0"
-              >
-                <Copy className="h-4 w-4" />
-              </Button>
-              <Button variant="ghost" size="sm" className="text-gray-400 hover:text-white h-8 w-8 p-0">
-                <Share2 className="h-4 w-4" />
-              </Button>
+
             </div>
             
             
           </div>
           <p className="text-gray-300 p-3 boder-t border-b boder-white bg-black w-full text-sm mb-2">{description || "Add a description for your snippet"}</p>
-          
-
+        
           {/* Code area */}
           <div className="p-4">
             
